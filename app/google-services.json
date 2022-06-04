@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "421246995683",
+    "project_id": "playground-logicarts",
+    "storage_bucket": "playground-logicarts.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:421246995683:android:5da7e70e1ec584161dc9d6",
+        "android_client_info": {
+          "package_name": "com.ibnutriyardi.tmdb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "421246995683-cna1706eap5c5p32rpfrs3nar82b196q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ibnutriyardi.tmdb",
+            "certificate_hash": "46ee7861446c1f29a4c680e3dd5031906a9eca15"
+          }
+        },
+        {
+          "client_id": "421246995683-vuvtdb0jg834d3ack4c4uuno1g72obi7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7fYlDcsE3peFC84b3DqZrKMVkwkRt-9M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "421246995683-vuvtdb0jg834d3ack4c4uuno1g72obi7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
