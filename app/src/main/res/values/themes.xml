@@ -1,16 +1,17 @@
 <resources>
 
     <style name="Theme.TMDB" parent="Theme.MaterialComponents.Light.DarkActionBar">
-        <item name="colorPrimary">@color/primary</item>
-        <item name="colorSecondary">@color/secondary</item>
-        <item name="colorAccent">@color/accent</item>
-        <item name="android:statusBarColor">@color/primary</item>
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorSecondary">@color/primaryLightColor</item>
+        <item name="colorAccent">@color/secondaryColor</item>
+        <item name="android:statusBarColor">@color/primaryDarkColor</item>
+        <item name="android:textColorPrimary">@color/primaryTextColor</item>
     </style>
 
     <style name="Theme.TMDB.Fullscreen" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <item name="colorPrimary">@color/primary</item>
-        <item name="colorSecondary">@color/secondary</item>
-        <item name="colorAccent">@color/accent</item>
-        <item name="android:statusBarColor">@color/primary</item>
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorSecondary">@color/primaryLightColor</item>
+        <item name="colorAccent">@color/secondaryColor</item>
+        <item name="android:statusBarColor">@color/primaryDarkColor</item>
     </style>
 </resources>
