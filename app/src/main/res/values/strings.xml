@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">TMDB</string>
     <string name="guest">Guest</string>
+    <string name="search">Search</string>
+    <string name="movies">Movies</string>
+    <string name="tv_shows">TV Shows</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
 </resources>

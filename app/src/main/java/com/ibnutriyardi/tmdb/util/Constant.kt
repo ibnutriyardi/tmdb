@@ -13,4 +13,11 @@ object Constant {
             const val TOKEN = "token"
         }
     }
+
+    class ContentType {
+        companion object {
+            const val MOVIE = "movie"
+            const val TV = "tv"
+        }
+    }
 }

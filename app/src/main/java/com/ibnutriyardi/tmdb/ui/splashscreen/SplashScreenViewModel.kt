@@ -13,32 +13,39 @@ class SplashScreenViewModel(
 
     sealed class Event {
         object FetchConfig : Event()
+        object OnLoginClicked : Event()
     }
 
     sealed class State {
+        object FetchComplete : State()
         object RedirectToHomepage : State()
     }
 
     override fun callEvent(event: Event) {
         when (event) {
             Event.FetchConfig -> checkUserToken()
+            Event.OnLoginClicked -> openHomepage()
         }
     }
 
     private fun checkUserToken() = launch {
-        if(userLocalSource.token.isBlank()) {
+        if (userLocalSource.token.isBlank()) {
             remoteConfigUtil.updateData({
                 updateUserData()
             }, {
-                setState(State.RedirectToHomepage)
+                setState(State.FetchComplete)
             })
         } else {
-            setState(State.RedirectToHomepage)
+            setState(State.FetchComplete)
         }
     }
 
     private fun updateUserData() = launch {
         userLocalSource.token = remoteConfigUtil.getString(Constant.RemoteConfigKey.AUTH_TOKEN)
+        setState(State.FetchComplete)
+    }
+
+    private fun openHomepage() = launch {
         setState(State.RedirectToHomepage)
     }
 }

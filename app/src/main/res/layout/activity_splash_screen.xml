@@ -13,17 +13,18 @@
         android:layout_height="wrap_content"
         android:text="@string/app_name"
         android:textAppearance="@style/AppText.Header.White"
-        app:layout_constraintBottom_toTopOf="@id/btn_guest_login"
+        app:layout_constraintBottom_toTopOf="@id/txt_guest_login"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/btn_guest_login"
-        android:textAppearance="@style/AppText.Body.White"
+        android:id="@+id/txt_guest_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:enabled="false"
         android:text="@string/guest"
+        android:textAppearance="@style/AppText.Body.White"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

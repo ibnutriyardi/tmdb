@@ -29,7 +29,7 @@ class RemoteConfigUtil {
         }
     }
 
-    fun updateData(onSuccess: () -> Unit, onFailed : () -> Unit) {
+    fun updateData(onSuccess: () -> Unit, onFailed : () -> Unit = {}) {
         remoteConfig.fetchAndActivate().addOnCompleteListener {
             if (it.isSuccessful) {
                 Log.d("Firebase RemoteConfig", "Activated")

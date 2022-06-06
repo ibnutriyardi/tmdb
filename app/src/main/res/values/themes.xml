@@ -1,17 +1,10 @@
 <resources>
 
-    <style name="Theme.TMDB" parent="Theme.MaterialComponents.Light.DarkActionBar">
+    <style name="Theme.TMDB" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="colorPrimary">@color/primaryColor</item>
         <item name="colorSecondary">@color/primaryLightColor</item>
         <item name="colorAccent">@color/secondaryColor</item>
         <item name="android:statusBarColor">@color/primaryDarkColor</item>
         <item name="android:textColorPrimary">@color/primaryTextColor</item>
-    </style>
-
-    <style name="Theme.TMDB.Fullscreen" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <item name="colorPrimary">@color/primaryColor</item>
-        <item name="colorSecondary">@color/primaryLightColor</item>
-        <item name="colorAccent">@color/secondaryColor</item>
-        <item name="android:statusBarColor">@color/primaryDarkColor</item>
     </style>
 </resources>
