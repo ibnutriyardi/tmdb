@@ -8,6 +8,7 @@ import com.ibnutriyardi.tmdb.network.repository.ContentRepository
 import com.ibnutriyardi.tmdb.network.repository.ContentRepositoryImpl
 import com.ibnutriyardi.tmdb.network.repository.NowPlayingRepository
 import com.ibnutriyardi.tmdb.network.repository.NowPlayingRepositoryImpl
+import com.ibnutriyardi.tmdb.ui.content.ContentViewModel
 import com.ibnutriyardi.tmdb.ui.home.MoviesViewModel
 import com.ibnutriyardi.tmdb.ui.splashscreen.SplashScreenViewModel
 import com.ibnutriyardi.tmdb.util.RemoteConfigUtil
@@ -39,9 +40,11 @@ val domainModule = module {
     single<GetNowPlayingMoviesUseCase> { GetNowPlayingMoviesUseCaseImpl(get()) }
     single<GetTrendingUseCase> { GetTrendingUseCaseImpl(get()) }
     single<GetDiscoverUseCase> { GetDiscoverUseCaseImpl(get()) }
+    single<GetContentDetailsUseCase> { GetContentDetailsUseCaseImpl(get()) }
 }
 
 val viewModelModule = module {
     viewModel { SplashScreenViewModel(get(), get()) }
     viewModel { MoviesViewModel(get(), get(), get()) }
+    viewModel { ContentViewModel(get()) }
 }

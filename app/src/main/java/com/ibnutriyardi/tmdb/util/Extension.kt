@@ -6,6 +6,7 @@ import android.content.Intent
 import android.util.DisplayMetrics
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.AppCompatImageView
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LiveData
 import com.google.android.material.tabs.TabLayout
@@ -56,4 +57,8 @@ fun View.gone() {
 
 fun View.visible() {
     this.visibility = View.VISIBLE
+}
+
+fun AppCompatImageView.loadImage(url: String) {
+    GlideApp.with(context).load(url).into(this)
 }

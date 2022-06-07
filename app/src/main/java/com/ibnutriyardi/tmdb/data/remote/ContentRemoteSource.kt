@@ -1,5 +1,6 @@
 package com.ibnutriyardi.tmdb.data.remote
 
+import com.ibnutriyardi.tmdb.model.ResponseContent
 import com.ibnutriyardi.tmdb.model.ResponseContentList
 import retrofit2.Response
 import retrofit2.http.GET
@@ -19,4 +20,10 @@ interface ContentRemoteSource {
         @Path("type", encoded = true) type: String,
         @Query("page", encoded = true) id: Int = 1
     ): Response<ResponseContentList>
+
+    @GET("{type}/{id}")
+    suspend fun getContentDetails(
+        @Path("type", encoded = true) type: String,
+        @Path("id", encoded = true) id: Int
+    ): Response<ResponseContent>
 }

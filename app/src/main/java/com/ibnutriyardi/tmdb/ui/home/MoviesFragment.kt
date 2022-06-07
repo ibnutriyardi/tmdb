@@ -3,7 +3,10 @@ package com.ibnutriyardi.tmdb.ui.home
 import com.google.android.material.snackbar.Snackbar
 import com.ibnutriyardi.tmdb.R
 import com.ibnutriyardi.tmdb.base.BaseFragment
+import com.ibnutriyardi.tmdb.ui.content.ContentDetailActivity
+import com.ibnutriyardi.tmdb.util.Constant
 import com.ibnutriyardi.tmdb.util.gone
+import com.ibnutriyardi.tmdb.util.startActivity
 import com.ibnutriyardi.tmdb.util.subscribeState
 import kotlinx.android.synthetic.main.fragment_content.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -15,7 +18,8 @@ class MoviesFragment : BaseFragment() {
     private val bannerAdapter by lazy { BannerAdapter() }
     private val sectionAdapter by lazy {
         SectionAdapter {
-            // TODO : Open content details
+            val data = ContentDetailActivity.withData(Constant.ContentType.MOVIE, it.id ?: 0, it.title ?: "")
+            requireActivity().startActivity<ContentDetailActivity>(*data)
         }
     }
 
